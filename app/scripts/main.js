@@ -73,4 +73,33 @@
   }
 
   // Your custom JavaScript goes here
+
+  // Helper functions
+
+  /**
+   * Helper function: Clone specified element and append above it.
+   * @type {function}
+   * @param {HTMLElement} el - node element that we want to clone.
+   */
+  function cloneNode(el) {
+    el.parentNode.appendChild(el.cloneNode(true));
+  }
+
+  // Submodule script
+
+  if (window.location.pathname.substr(1) === 'submodule.html') {
+    // Access to overview div
+    var overviewContainer = document.getElementById('overview');
+
+    // Access button inside overview
+    var moreBaconBtn = overviewContainer.getElementsByTagName('button')[0];
+
+    // Access bacon img inside overview
+    var baconImg = overviewContainer.getElementsByTagName('img')[0];
+
+    // Initialize event listener on our button inside overview
+    moreBaconBtn.addEventListener('click', function() {
+      cloneNode(baconImg);
+    }, false);
+  }
 })();
