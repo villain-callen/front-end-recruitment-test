@@ -1,0 +1,12 @@
+// Import global palette and settings
+@import 'checkout.palette';
+@import 'checkout.settings';
+@import 'checkout.typography';
+
+
+//COMPONENTS
+
+// Cart
+@import 'components/cart/cart.palette';
+@import 'components/cart/cart.settings';
+@import 'components/cart/cart';

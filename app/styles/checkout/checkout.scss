@@ -1,0 +1,35 @@
+@import 'settings';
+
+.checkout {
+  background-color: $checkout-bg;
+
+  .checkout__wrapper {
+    max-width: $checkout-container;
+  }
+
+  .user,
+  .additional-components {
+    width: 100%;
+  }
+
+  .user {
+    order: 2;
+
+    @media screen and (min-width: $breakpoint-xlarge) {
+      order: 1;
+      max-width: $user-maxwidth;
+    }
+  }
+
+  .additional-components {
+    order: 1;
+    padding: 0 $padding-rl;
+
+    @media screen and (min-width: $breakpoint-xlarge) {
+      max-width: $cart-maxwidth;
+      order: 2;
+    }
+
+  }
+
+}
