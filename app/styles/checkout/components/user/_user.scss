@@ -1,0 +1,85 @@
+.main-component--user {
+  counter-reset: user-section;
+}
+
+.user {
+
+  h4 {
+    &:before {
+      width: $counter-size;
+      height: $counter-size;
+      background: $counter-bg;
+      color: $counter-c;
+      border-radius: $counter-radius;
+      counter-increment: user-section;
+      content: counter(user-section);
+      display: inline-block;
+      margin-right: 10px;
+      font-size: $counter-font-size;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding-top: 20px;
+      padding-left: 10px;
+    }
+
+    .icon--small {
+      font-size: 1em;
+      overflow: hidden;
+      height: $counter-size;
+      vertical-align: middle;
+
+      &:after {
+        content: 'lock';
+        color: #484848;
+        vertical-align: middle;
+      }
+
+    }
+
+  }
+
+}
+
+.details {
+  .details__item {
+    padding: 0 6px;
+  }
+
+  .mdl-selectfield__box {
+    border-bottom: 0;
+    padding: 0 10px 22px;
+    overflow: visible;
+    top: 23px;
+
+    & > i {
+      margin-top: -19px;
+      right: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .mdl-selectfield {
+    padding-bottom: 4px;
+    width: 100%;
+
+    &.is-dirty {
+      .material-icons {
+        color: #333;
+      }
+    }
+  }
+
+  .mdl-selectfield__label,
+  .mdl-selectfield__box-value {
+    padding: 0 10px 0 9px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .mdl-selectfield__label {
+    color: #9b9b9b;
+  }
+
+}

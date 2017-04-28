@@ -7,17 +7,17 @@
     max-width: $checkout-container;
   }
 
-  .user,
+  .main-component,
   .additional-components {
     width: 100%;
   }
 
-  .user {
+  .main-component {
     order: 2;
 
     @media screen and (min-width: $breakpoint-xlarge) {
       order: 1;
-      max-width: $user-maxwidth;
+      max-width: $main-component-maxwidth;
     }
   }
 
@@ -26,10 +26,20 @@
     padding: 0 $padding-rl;
 
     @media screen and (min-width: $breakpoint-xlarge) {
-      max-width: $cart-maxwidth;
+      max-width: $components-maxwidth;
       order: 2;
+      padding-top: 40px;
     }
 
+  }
+
+  .mdl-grid.mdl-grid--no-spacing.details {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $breakpoint-xlarge) {
+      padding-left: 24px;
+      padding-top: 20px;
+    }
   }
 
 }

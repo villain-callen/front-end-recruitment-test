@@ -1,0 +1,45 @@
+.ca-input-wrapper {
+  background: $white;
+  border-radius: $input-radius;
+  box-shadow: $input-shadow;
+  position: relative;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
+  }
+
+  .ca-label {
+    display: block;
+    cursor: text;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: 700;
+    color: #515356;
+    font-size: 12px;
+
+    &.ca-label--email {
+      top: 3px;
+    }
+  }
+
+  .ca-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: $input-radius;
+    padding: 25px 10px 7px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #9b9b9b;
+
+    &.ca-input--email {
+      padding: 24px 10px 8px;
+    }
+
+    &::placeholder {
+      color: #9b9b9b;
+    }
+
+  }
+}
