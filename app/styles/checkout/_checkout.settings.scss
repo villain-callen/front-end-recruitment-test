@@ -1,10 +1,11 @@
-$checkout-container: 886px;
+// CHECKOUT SETTINGS
 
-$main-component-maxwidth: 599px;
-$components-maxwidth: 287px;
+$checkout-container:               886px;
+$main-component-maxwidth:          599px;
+$components-maxwidth:              287px;
 
-
-$breakpoint-xlarge: 900px;
+$breakpoint-xlarge:                920px;
+$breakpoint-xlarge-down:           $breakpoint-xlarge - 1px;
 
 $padding-rl: 6px;
 

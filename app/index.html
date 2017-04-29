@@ -233,88 +233,117 @@
             </div>
           </section>
         </div>
+
         <div class="mdl-layout__tab-panel is-active checkout" id="checkout">
           <section class="checkout__wrapper mdl-grid mdl-grid--no-spacing">
 
             <form action="" class="form mdl-cell mdl-cell--12-col" id="checkout-form">
-              <div class="mdl-grid mdl-grid--no-spacing">
+              <div class="mdl-grid mdl-grid--no-spacing checkout__content">
                 <div class="mdl-cell mdl-cell--8-col main-component main-component--user">
 
-                  <div class="user user--details">
-                    <h4 class="uppercase strong">Personal Information</h4>
-                    <div class="mdl-grid mdl-grid--no-spacing details">
-                      <div class="mdl-cell mdl-cell--6-col details__item">
+                  <div class="user">
+                    <h4>Personal Information</h4>
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
                         <div class="ca-input-wrapper">
                           <label class="ca-label" for="first-name">First name</label>
-                          <input class="ca-input" type="text" id="first-name" placeholder="Jane">
+                          <input class="ca-input" type="text" id="first-name" placeholder="Elon">
                         </div>
                       </div>
-                      <div class="mdl-cell mdl-cell--6-col details__item">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
                         <div class="ca-input-wrapper">
                           <label class="ca-label" for="last-name">Last name</label>
-                          <input class="ca-input" type="text" id="last-name" placeholder="Doe">
+                          <input class="ca-input" type="text" id="last-name" placeholder="Musk">
                         </div>
                       </div>
                     </div>
-
-                    <div class="mdl-grid mdl-grid--no-spacing details">
-                      <div class="mdl-cell mdl-cell--12-col details__item">
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--12-col details">
                         <div class="ca-input-wrapper">
-                          <label class="ca-label ca-label--email" for="email">Email</label>
-                          <input class="ca-input ca-input--email" type="text" id="email" placeholder="jane.doe@spacex.com" required>
+                          <label class="ca-label" for="email">Email</label>
+                          <input class="ca-input" type="text" id="email" placeholder="elon@spacex.com" required>
                         </div>
                       </div>
                     </div>
-
-                    <div class="mdl-grid mdl-grid--no-spacing details">
-                      <div class="mdl-cell mdl-cell--6-col details__item">
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
                         <div class="ca-input-wrapper">
-                          <span class="ca-label ca-label--email" for="country">Country</span>
-
+                          <span class="ca-label" for="country">Country</span>
                           <div class="mdl-selectfield mdl-js-selectfield">
                             <select id="country" name="country" class="mdl-selectfield__select" required>
                               <option value=""></option>
+                              <option value="option1_value">Australia</option>
+                              <option value="option1_value">Canada</option>
                               <option value="option0_value">United States</option>
-                              <option value="option1_value">option 1</option>
                             </select>
                             <label class="mdl-selectfield__label" for="country">Choose option</label>
                             <span class="mdl-selectfield__error">This field is required!</span>
                           </div>
-
                         </div>
                       </div>
-                      <div class="mdl-cell mdl-cell--6-col details__item">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
                         <div class="ca-input-wrapper">
-                          <label class="ca-label ca-label--email" for="postal-code">Postal Code</label>
-                          <input class="ca-input ca-input--email" type="text" id="postal-code" placeholder="10001">
+                          <label class="ca-label" for="postal-code">Postal Code</label>
+                          <input class="ca-input" type="text" id="postal-code" placeholder="10001">
                         </div>
                       </div>
                     </div>
-
-                    <div class="mdl-grid mdl-grid--no-spacing details">
-                      <div class="mdl-cell mdl-cell--12-col details__item">
-                        <div class="ca-input-wrapper">
-                          <label class="ca-label ca-label--email" for="phone">Phone Number</label>
-                          <input class="ca-input ca-input--email" type="text" id="phone" placeholder="(212) 692-93-92">
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--12-col details">
+                        <div class="ca-input-wrapper ca-input-wrapper--phone">
+                          <label class="ca-label" for="phone">Phone Number</label>
+                          <input class="ca-input" type="text" id="phone" placeholder="(212) 692-93-92">
                         </div>
                       </div>
                     </div>
-
                   </div>
+
                   <div class="user user--payments">
-                    <h4 class="uppercase strong">Payment Details <span class="material-icons icon--small"></span></h4>
+                    <h4>Payment Details <span class="material-icons icon--small"></span></h4>
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--12-col details">
+                        <div class="ca-input-wrapper">
+                          <label class="ca-label" for="card">Credit Card Number</label>
+                          <input class="ca-input ca-input--card" type="text" id="card" placeholder="0000 - 0000 - 0000 - 0000" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mdl-grid mdl-grid--no-spacing user__details">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
+                        <div class="ca-input-wrapper">
+                          <label class="ca-label" for="code">Security code</label>
+                          <input class="ca-input" type="text" id="code" placeholder="***">
+                          <div class="ca-tooltip">
+                            <div id="tooltip" class="icon material-icons">help_outline</div>
+                            <div class="mdl-tooltip mdl-tooltip--top" for="tooltip">
+                              Flip your card over and look at the signature box. You should see either the enterie 16-digit credit card number or just the last four digits followed by a special 3-digit code. This 3-digit code is your card security code.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet details">
+                        <div class="ca-input-wrapper">
+                          <label class="ca-label" for="exp-date">Expiration date</label>
+                          <input class="ca-input" type="text" id="exp-date" placeholder="MM / YY">
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-
-
-
+                  <div class="mdl-grid mdl-grid--no-spacing user__details">
+                    <div class="mdl-cell mdl-cell--12-col details">
+                      <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--checkout">
+                        <span class="icon material-icons">shopping_cart</span>
+                        Complete purchase
+                      </button>
+                    </div>
+                  </div>
                 </div>
-
 
                 <aside class="mdl-cell mdl-cell--4-col additional-components">
                   <div class="cart">
                     <div class="cart__inner">
-                      <h4 class="strong">Your order</h4>
+                      <h4>Your order</h4>
                       <div class="cart__group cart__group--products">
                         <div class="item item--product">
                           <span class="item__name">Apple Watch Sport</span>
@@ -341,17 +370,15 @@
                           <span class="item__price item__price--total strong" data-currency="$" data-price="960">960</span>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </aside>
 
-
               </div>
             </form>
-
           </section>
         </div>
+
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">

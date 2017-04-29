@@ -3,8 +3,19 @@
 }
 
 .user {
+  box-sizing: border-box;
+
+  &.user--payments {
+    padding-bottom: $offset-vertical;
+
+    @media screen and (min-width: $breakpoint-xlarge) {
+      padding-top: $offset-vertical;
+    }
+  }
 
   h4 {
+    padding-bottom: $offset-vertical;
+
     &:before {
       width: $counter-size;
       height: $counter-size;
@@ -14,14 +25,14 @@
       counter-increment: user-section;
       content: counter(user-section);
       display: inline-block;
-      margin-right: 10px;
+      margin-right: $offset-horizontal;
       font-size: $counter-font-size;
       text-align: center;
     }
 
-    @media screen and (max-width: 800px) {
-      padding-top: 20px;
-      padding-left: 10px;
+    @media screen and (max-width: $breakpoint-xlarge-down) {
+      padding-top: $offset-vertical;
+      padding-left: $offset-horizontal;
     }
 
     .icon--small {
@@ -29,33 +40,41 @@
       overflow: hidden;
       height: $counter-size;
       vertical-align: middle;
+      padding-left: 5px;
 
       &:after {
         content: 'lock';
-        color: #484848;
+        color: $icon-lock-c;
         vertical-align: middle;
       }
-
     }
-
   }
-
 }
 
-.details {
-  .details__item {
+.user__details {
+
+  &.mdl-grid.mdl-grid--no-spacing {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $breakpoint-xlarge) {
+      padding-left: 24px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .details {
     padding: 0 6px;
   }
 
   .mdl-selectfield__box {
     border-bottom: 0;
-    padding: 0 10px 22px;
+    padding: 0 $offset-horizontal 22px;
     overflow: visible;
     top: 23px;
 
     & > i {
       margin-top: -19px;
-      right: 10px;
+      right: $offset-horizontal;
       font-weight: 700;
     }
   }
@@ -66,20 +85,34 @@
 
     &.is-dirty {
       .material-icons {
-        color: #333;
+        color: $select-icon-c;
       }
     }
   }
 
   .mdl-selectfield__label,
   .mdl-selectfield__box-value {
-    padding: 0 10px 0 9px;
+    padding: 0 $offset-horizontal 0 9px;
     font-weight: 700;
-    color: #333;
+    color: $select-c;
   }
 
   .mdl-selectfield__label {
-    color: #9b9b9b;
+    color: $select-label-c;
+  }
+
+  .mdl-button--checkout {
+    color: $checkout-button-c;
+    background: $checkout-button-bg;
+    box-shadow: 0 2px 0 $checkout-button-shadow;
+    width: 100%;
+    height: 50px;
+    font-weight: 700;
+    border-radius: 4px;
+
+    @media screen and (max-width: $breakpoint-xlarge-down) {
+      margin-bottom: 40px;
+    }
   }
 
 }

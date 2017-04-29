@@ -1,10 +1,16 @@
-@import 'settings';
+@import 'imports';
 
 .checkout {
   background-color: $checkout-bg;
 
   .checkout__wrapper {
     max-width: $checkout-container;
+  }
+
+  .checkout__content {
+    @media screen and (min-width: $breakpoint-xlarge) {
+      flex-wrap: nowrap; // workaround for Safari > 10 bug with min/max width calculation in multirow flex container
+    }
   }
 
   .main-component,
@@ -31,15 +37,6 @@
       padding-top: 40px;
     }
 
-  }
-
-  .mdl-grid.mdl-grid--no-spacing.details {
-    box-sizing: border-box;
-
-    @media screen and (min-width: $breakpoint-xlarge) {
-      padding-left: 24px;
-      padding-top: 20px;
-    }
   }
 
 }

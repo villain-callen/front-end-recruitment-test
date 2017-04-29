@@ -14,7 +14,6 @@
   }
 
   h4 {
-    text-transform: uppercase;
     padding-bottom: $cart-inner-padding;
   }
 
@@ -37,7 +36,7 @@
 
   .item {
     display: flex;
-    font-size: $cart-font-size;
+    font-size: $cart-fs;
     line-height: 1.5;
 
     &.item--product {
@@ -57,7 +56,7 @@
       width: calc(100% / 3);
 
       &.item__price--total {
-        font-size: $cart-summary-size;
+        font-size: $cart-summary-fs;
 
         &:before {
           padding-right: 6px;

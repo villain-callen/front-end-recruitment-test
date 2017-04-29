@@ -1,26 +1,28 @@
 .ca-input-wrapper {
-  background: $white;
+  background: $input-bg;
   border-radius: $input-radius;
   box-shadow: $input-shadow;
   position: relative;
 
-  @media screen and (max-width: 800px) {
-    margin-top: 20px;
+  @media screen and (max-width: $breakpoint-xlarge-down) {
+    margin-bottom: 20px;
+
+    &.ca-input-wrapper--phone {
+      margin-bottom: 0;
+    }
   }
 
   .ca-label {
     display: block;
     cursor: text;
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    margin-top: 3px;
+    margin-left: $offset-left;
     font-weight: 700;
-    color: #515356;
-    font-size: 12px;
-
-    &.ca-label--email {
-      top: 3px;
-    }
+    color: $label-c;
+    font-size: $label-fs;
   }
 
   .ca-input {
@@ -28,18 +30,34 @@
     box-sizing: border-box;
     border: 0;
     border-radius: $input-radius;
-    padding: 25px 10px 7px;
-    font-size: 16px;
+    padding: 25px $offset-left 7px;
+    font-size: $input-fs;
     font-weight: 600;
-    color: #9b9b9b;
+    color: $input-c;
 
-    &.ca-input--email {
-      padding: 24px 10px 8px;
+    &.ca-input--card {
+      background: url('../../images/sprite.png') no-repeat;
+      background-position: right 13px center;
     }
 
     &::placeholder {
-      color: #9b9b9b;
+      color: $placeholder-c;
     }
 
   }
+
+  .ca-tooltip {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -11px;
+    margin-right: 12px;
+    color: $tooltip-c;
+    cursor: pointer;
+
+    .icon {
+      font-size: 22px;
+    }
+  }
+
 }

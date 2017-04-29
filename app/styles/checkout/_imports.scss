@@ -1,8 +1,7 @@
 // Import global palette and settings
-@import 'checkout.palette';
+@import 'palette';
 @import 'checkout.settings';
-@import 'checkout.typography';
-
+@import 'typography';
 
 //COMPONENTS
 
@@ -11,7 +10,7 @@
 @import 'components/cart/cart.settings';
 @import 'components/cart/cart';
 
-// User
+// User - personal information and payments
 @import 'components/user/user.palette';
 @import 'components/user/user.settings';
 @import 'components/user/user';
